@@ -7,13 +7,13 @@ int dicari;
 int arr[27][27] = {0};
 int visited[27][27] = {0};
 
-void cari(int k,int j,int i)
+void cari(int k,int j,int i)            // Flood-Fill Algorithm 
 {
 
     if(arr[j][i] == k){
     if(visited[j][i] == 0)
     {
-        total +=1;
+        total +=1;                      // Visit a node first, and then visit nearby nodes
         visited[j][i] = 1;
         cari(k,j,i+1);
         cari(k,j+1,i);
